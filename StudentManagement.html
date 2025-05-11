@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Admin Dashboard - Student Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/StudentManagement.css" />
+</head>
+<body>
+  <aside class="sidebar tilt-3d card-3d">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">User Management</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">System Settings</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="greeting card-3d">
+      <h1>Welcome Back, Admin 👋</h1>
+    </section>
+
+    <section class="add-student card-3d">
+      <h2>Add New Student</h2>
+      <form id="add-student-form" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <div class="input-group">
+          <label>Full Name:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Student ID:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>NIC / Passport Number:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Course:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Department:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Batch / Intake:</label>
+          <input type="text" placeholder="e.g., Batch 11 – February 2024" required />
+        </div>
+
+        <div class="input-group">
+          <label>Enrolled Start Date:</label>
+          <input type="date" required />
+        </div>
+
+        <div class="input-group">
+          <label>Enrolled End Date:</label>
+          <input type="date" />
+        </div>
+
+        <div class="input-group">
+          <label>Date of Birth:</label>
+          <input type="date" required />
+        </div>
+
+        <div class="input-group">
+          <label>Email:</label>
+          <input type="email" required />
+        </div>
+
+        <div class="input-group">
+          <label>Phone:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Parent / Guardian Name:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Parent / Guardian Contact:</label>
+          <input type="text" required />
+        </div>
+
+        <div class="input-group">
+          <label>Campus Branch / Location:</label>
+          <input type="text" placeholder="e.g., Negombo" required />
+        </div>
+
+        <div class="input-group">
+          <label>Role:</label>
+          <select required>
+            <option value="">Select Role</option>
+            <option>Undergraduate</option>
+            <option>Postgraduate</option>
+            <option>Short Course</option>
+            <option>Guest Access</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Profile Picture:</label>
+          <input type="file" />
+        </div>
+
+        <div class="input-group">
+          <label>Upload Additional Face Images:</label>
+          <input type="file" multiple />
+        </div>
+
+        <div class="input-group">
+          <label>Remarks / Notes:</label>
+          <textarea rows="4" placeholder="Medical notes, ID issues, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Student</button>
+      </form>
+    </section>
+
+    <section class="user-management card-3d">
+      <h2>User Management</h2>
+      <button class="btn-primary" onclick="openAddUserForm()">Add User</button>
+      <div class="card">
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="facial-recognition card-3d">
+      <h2>Facial Recognition Logs</h2>
+      <button class="btn-primary" onclick="viewFaceRecognitionLogs()">View Logs</button>
+      <div class="card"></div>
+    </section>
+
+    <section class="student-list card-3d">
+      <h2>Students List</h2>
+      <div class="card">
+        <table id="students-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Course</th>
+              <th>Department</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="pagination card-3d">
+      <button class="prev" onclick="previousPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+  </main>
+
+  <script src="scripts/StudentManagement.js"></script>
+</body>
+</html>

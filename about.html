@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About the System</title>
+  <link rel="stylesheet" href="styles/about.css" />
+  <script src="https://unpkg.com/gsap@3.11.1/dist/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Developer Info -->
+  <section class="developer-card section">
+    <img src="images/your-photo.png" alt="Developer Photo">
+    <div class="developer-info">
+      <h2>🧑‍💻 System Developed By</h2>
+      <ul>
+        <li><strong>Name:</strong> Warnakulasooriya Layan Vikasith Fernando</li>
+        <li><strong>Reg No.:</strong> 00240903</li>
+        <li><strong>Course:</strong> BEng (Hons) Software Engineering</li>
+        <li><strong>Campus:</strong> Esoft Metro Campus – Negombo</li>
+        <li><strong>Batch:</strong> February 2024 – Batch 11</li>
+        <li><strong>Project Title:</strong> AI-Based Facial Recognition Attendance System</li>
+        <li><strong>Contact:</strong> E185661@esoft.academy</li>
+      </ul>
+    </div>
+  </section>
+
+  <main class="about">
+    <section class="section">
+      <h2>📘 About the System</h2>
+      <p><strong>Esoft Metro Campus AI-Powered Attendance Management System</strong></p>
+      <p>This AI-Based Facial Recognition Attendance System is designed exclusively for Esoft Metro Campus – Negombo.</p>
+    </section>
+
+    <section class="section">
+      <h2>❓ Why Was This System Created?</h2>
+      <ul>
+        <li>Eliminates the need for ID cards or manual logs</li>
+        <li>Prevents proxy attendance</li>
+        <li>Sends real-time notifications</li>
+        <li>Enhances campus security and reputation</li>
+        <li>Protects student data with encryption</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>💡 What the System Does</h2>
+      <ul>
+        <li>Scans student faces in real-time</li>
+        <li>Verifies identity with deep learning</li>
+        <li>Automatically marks attendance</li>
+        <li>Sends SMS notifications</li>
+        <li>Logs and secures attendance data</li>
+        <li>Flags students without scheduled lectures</li>
+      </ul>
+    </section>
+
+    <section class="section grid-features">
+      <h2>🌟 Core Features</h2>
+      <div class="grid">
+        <div><h3>🎯 AI Recognition</h3><p>Matches faces under varying conditions using AI.</p></div>
+        <div><h3>🕒 Real-Time Logs</h3><p>Instant attendance with course timestamps.</p></div>
+        <div><h3>📲 SMS Alerts</h3><p>Sends live alerts for entry/exit.</p></div>
+        <div><h3>🗓️ Schedule Awareness</h3><p>Detects unscheduled visits.</p></div>
+        <div><h3>📊 Admin Reports</h3><p>Generate and export attendance data.</p></div>
+        <div><h3>🔐 Data Privacy</h3><p>Encrypted storage and role-based access.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>👥 Who Uses the System?</h2>
+      <table>
+        <thead>
+          <tr><th>User Role</th><th>Function</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🧑‍🎓 Students</td><td>Walk in and get marked present automatically</td></tr>
+          <tr><td>👩‍🏫 Lecturers</td><td>Monitor logs and schedule matching</td></tr>
+          <tr><td>👨‍💼 Admins</td><td>Manage profiles, reports, configurations</td></tr>
+          <tr><td>👮 Security</td><td>Monitor students without lectures</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>⚙️ How It Works</h2>
+      <ol>
+        <li>Student enters the campus</li>
+        <li>Camera scans face</li>
+        <li>AI matches it to the database</li>
+        <li>Attendance is marked</li>
+        <li>Schedule is validated</li>
+        <li>Notification is triggered</li>
+        <li>Admin can review logs</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>🧪 Technology Stack</h2>
+      <ul>
+        <li>Python, OpenCV, TensorFlow</li>
+        <li>MySQL or Firebase</li>
+        <li>Flask / Django</li>
+        <li>Twilio / FCM</li>
+        <li>React / HTML / CSS</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>🔐 Data Privacy and Security</h2>
+      <p>Facial and attendance records are encrypted. Access is restricted and complies with modern data protection standards.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 ESOFT. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animations
+    gsap.from(".section", {
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #3f51b5; /* Elegant Blue */
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 40px 20px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.sidebar .logo img {
+  width: 120px;
+  margin-bottom: 40px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #1c39bb;
+}
+
+/* Main Content */
+main {
+  margin-left: 250px;
+  padding: 40px;
+  width: calc(100% - 250px);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+section {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+/* Add Student Form */
+.add-student,
+.user-management,
+.facial-recognition,
+.student-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #3f51b5;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="date"] {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+button.btn-primary {
+  background-color: #3f51b5;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #1c39bb;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f1f1f1;
+}
+
+table td button {
+  background-color: #3949ab;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+  background-color: #3f51b5;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  background-color: #3949ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #3f51b5;
+}
+
+/* Card Hover Effects */
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design for Mobile and Tablet */
+@media (max-width: 1200px) {
+  main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar nav ul li {
+    padding: 10px;
+  }
+
+  .add-student {
+    margin-bottom: 20px;
+  }
+
+  /* Adjust the form's input fields for smaller screens */
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  input[type="date"] {
+    padding: 10px;
+  }
+
+  button.btn-primary {
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  /* Mobile Sidebar */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .sidebar nav ul li {
+    padding: 8px;
+    text-align: left;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  /* Make tables responsive */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  /* Adjust input fields and buttons for mobile */
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button.btn-primary {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Make pagination buttons stack on mobile */
+  .pagination {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .pagination button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  /* Adjustments for very small screens like mobile phones in portrait mode */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  input[type="date"] {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  button.btn-primary {
+    font-size: 14px;
+  }
+}
+
+/* 3D Effects */
+/* 3D Card & Sidebar Animations */
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 800px;
+  transition: all 0.6s ease;
+  will-change: transform;
+}
+.card-3d:hover {
+  transform: rotateX(5deg) rotateY(5deg) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.tilt-3d:hover {
+  transform: rotateY(-10deg);
+}
+
+/* Button Animation */
+button.btn-primary {
+  transform: perspective(500px) translateZ(10px);
+  transition: all 0.4s ease;
+}
+button.btn-primary:hover {
+  transform: perspective(500px) translateZ(15px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(63, 81, 181, 0.5);
+}
+
+textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
