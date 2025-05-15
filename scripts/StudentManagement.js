@@ -74,6 +74,11 @@ function openAddUserForm() {
   // Implement functionality for adding a new user (Admin/Faculty/Student)
   alert("Open Add User Form");
 }
+function viewStudents() {
+  document.querySelector(".student-list").scrollIntoView({ behavior: "smooth" });
+  fetchStudents();
+}
+
 // Tilt effect (optional)
 document.querySelectorAll(".card-3d").forEach((card) => {
   card.addEventListener("mousemove", (e) => {

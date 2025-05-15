@@ -37,72 +37,58 @@
           <label>Full Name:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Student ID:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>NIC / Passport Number:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Course:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Department:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Batch / Intake:</label>
           <input type="text" placeholder="e.g., Batch 11 – February 2024" required />
         </div>
-
         <div class="input-group">
           <label>Enrolled Start Date:</label>
           <input type="date" required />
         </div>
-
         <div class="input-group">
           <label>Enrolled End Date:</label>
           <input type="date" />
         </div>
-
         <div class="input-group">
           <label>Date of Birth:</label>
           <input type="date" required />
         </div>
-
         <div class="input-group">
           <label>Email:</label>
           <input type="email" required />
         </div>
-
         <div class="input-group">
           <label>Phone:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Parent / Guardian Name:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Parent / Guardian Contact:</label>
           <input type="text" required />
         </div>
-
         <div class="input-group">
           <label>Campus Branch / Location:</label>
           <input type="text" placeholder="e.g., Negombo" required />
         </div>
-
         <div class="input-group">
           <label>Role:</label>
           <select required>
@@ -113,43 +99,26 @@
             <option>Guest Access</option>
           </select>
         </div>
-
         <div class="input-group">
           <label>Profile Picture:</label>
           <input type="file" />
         </div>
-
         <div class="input-group">
           <label>Upload Additional Face Images:</label>
           <input type="file" multiple />
         </div>
-
         <div class="input-group">
           <label>Remarks / Notes:</label>
           <textarea rows="4" placeholder="Medical notes, ID issues, etc."></textarea>
         </div>
-
         <button type="submit" class="btn-primary">Add Student</button>
       </form>
     </section>
 
+    <!-- ✅ Updated User Management Section -->
     <section class="user-management card-3d">
       <h2>User Management</h2>
-      <button class="btn-primary" onclick="openAddUserForm()">Add User</button>
-      <div class="card">
-        <table id="users-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Role</th>
-              <th>Email</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+      <button class="btn-primary" onclick="viewStudents()">Add Lectures</button>
     </section>
 
     <section class="facial-recognition card-3d">

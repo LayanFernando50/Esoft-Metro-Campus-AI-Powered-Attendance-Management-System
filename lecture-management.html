@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Lecturer Registration</title>
+  <link rel="stylesheet" href="styles\lecture-management.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>New Lecturer Registration</h2>
+    <form id="lecturer-form" onsubmit="return submitLecturerForm()">
+      <div class="form-step active">
+        <fieldset>
+          <legend>Basic Personal Info</legend>
+          <label>Full Name: <input type="text" required></label>
+          <label>Title:
+            <select required>
+              <option>Mr.</option>
+              <option>Ms.</option>
+              <option>Dr.</option>
+              <option>Prof.</option>
+            </select>
+          </label>
+          <label>NIC or Passport Number: <input type="text" required></label>
+          <label>Profile Photo: <input type="file" accept="image/*" required></label>
+        </fieldset>
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <div class="form-step">
+        <fieldset>
+          <legend>Contact Info</legend>
+          <label>University Email: <input type="email" required></label>
+          <label>Mobile Number: <input type="text" required></label>
+          <label>Emergency Contact Number: <input type="text"></label>
+        </fieldset>
+        <button type="button" class="prev">Previous</button>
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <div class="form-step">
+        <fieldset>
+          <legend>Academic & Work Info</legend>
+          <label>Highest Qualification: <input type="text" required></label>
+          <label>Department: <input type="text" required></label>
+          <label>Position: <input type="text" required></label>
+          <label>Type:
+            <select required>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+              <option>Visiting</option>
+            </select>
+          </label>
+          <label>Assigned Modules:
+            <select multiple required>
+              <option>Mathematics</option>
+              <option>Programming</option>
+              <option>Data Science</option>
+              <option>AI</option>
+              <option>Marketing</option>
+            </select>
+          </label>
+        </fieldset>
+        <button type="button" class="prev">Previous</button>
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <div class="form-step">
+        <fieldset>
+          <legend>Login & Access</legend>
+          <label>Microsoft Email for Login: <input type="email" required></label>
+          <label>Access Level:
+            <input type="text" value="Lecturer" readonly>
+          </label>
+        </fieldset>
+        <button type="button" class="prev">Previous</button>
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <div class="form-step">
+        <fieldset>
+          <legend>System Use & Consent</legend>
+          <label><input type="checkbox" required> I allow my face to be used for attendance recognition</label>
+          <label>Upload Contract (PDF): <input type="file" accept="application/pdf" required></label>
+        </fieldset>
+        <button type="button" class="prev">Previous</button>
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <div class="form-step">
+        <fieldset>
+          <legend>Face Registration</legend>
+          <label>Upload Face Image: <input type="file" accept="image/*" required></label>
+          <label>Staff ID to Link: <input type="text" required></label>
+        </fieldset>
+        <button type="button" class="prev">Previous</button>
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <div class="form-step">
+        <details>
+          <summary>Advanced Options</summary>
+          <label>Full Address: <textarea rows="2"></textarea></label>
+          <label>Additional Documents: <input type="file" multiple></label>
+          <label>Start Date: <input type="date"></label>
+        </details>
+        <button type="button" class="prev">Previous</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <p id="confirmation" class="confirmation"></p>
+  </div>
+
+  <script src="scripts\lecture-management.js"></script>
+</body>
+</html>
